@@ -3,10 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The official homepage for Bleu legs, FLL Team.">
-    <title>Bleulegs FLL</title>
+    <meta name="description" content="The official homepage for Bleu Legs, FLL Team.">
+    <title>Bleu Legs - FIRST LEGO League</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply the 'Prompt' font */
+        body {
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            background-color: #131313;
+            color: white;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #272727; /* Solid color background */
+            border-radius: 10px;
+            padding: 12px 20px;
+            width: 28%;
+            margin: 0 auto;
+            height: 20vh; /* Set height to 20% of the screen */
+        }
+
+        .navbar-brand {
+            font-size: 22px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            color: white !important;
+            border-radius: 6px;
+            padding: 8px 12px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgb(58, 58, 58);
+        }
+
+        /* White navbar toggle icon */
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1); /* Makes the icon white */
+        }
+
+        /* Sections */
+        .section {
+            width: 100%;
+            padding: 80px 15%;
+            background-color: #08143c;
+            margin-bottom: 20px;
+            margin-top: 20px; /* Add margin-top to avoid overlapping with navbar */
+        }
+
+        /* Alternate section background */
+        .section:nth-child(even) {
+            background-color: #1e1e1e;
+        }
+
+        /* Images */
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                width: 90%; /* Full width on small screens */
+                height: 25vh; /* Adjust height for smaller screens */
+            }
+            .section {
+                padding: 60px 10%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Bleulegs homepage.</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bleu Legs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>Team Bleu Legs started as a after school Robotics group located at Calamvale Community College, Overtime as our knowledge grew so did our team, in only 2 weeks we went from a 4 person team to a 8 person team. Our first Competition was a FLL or First Lego League Regional Comp in Brisbane,  It was tough but we pushed through, In the end as a team we achieved a Robot point score of 160 and a  4.5 / 5 in our innovation project, making us top 5 in the Competition meaning we would be advancing to Nationals. After long days and late nights it was finally time for Nationals, This time in Gladstone with 48 teams competing we got 165 points and a 5/5 Innovation Score, This only put us in 23rd place due to our robot Game, But out of no Where our names got announced to congratulate us on making it to APOC or Asia Pacific Open international Championships, A massive achievement, so for the next 8 months our team will be working to the best of our abilities to hopefully win the international championships putting us in the top 0.001% of the WORLD!</p>
+        <img src="about-image.jpg" alt="About Us">
+    </section>
+
+    <section class="section" id="team">
+        <h2>Team Members</h2>
+        <p>Our team consists of talented and passionate individuals dedicated to building and programming robots for competition.</p>
+        <img src="team-image.jpg" alt="Team Members">
+    </section>
+
+    <section class="section" id="sponsors">
+        <h2>Sponsors</h2>
+        <p>We are grateful for the support of our sponsors who help make our journey possible.</p>
+        <img src="sponsors-image.jpg" alt="Sponsors">
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
