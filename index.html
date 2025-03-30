@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleu Legs</title>
+    <style>
+        body {
+            background-color: #001f3d;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 2.5em;
+            background-color: #003366;
+        }
+        .content-box {
+            background-color: #003366;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .content-box h2 {
+            font-size: 1.5em;
+        }
+        .content-box p {
+            font-size: 1em;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        /* Make sure the fireworks don't block content */
+        #fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>Bleu Legs</header>
+
+    <div class="content-box">
+        <h2>Box 1</h2>
+        <p>This is some text inside the first box.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Box 2</h2>
+        <p>This is some text inside the second box.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Box 3</h2>
+        <p>This is some text inside the third box.</p>
+    </div>
+
+    <footer style="text-align:center; padding: 20px; background-color: #003366;">
+        <a href="flappybird.html">Go to Flappy Bird Game</a>
+    </footer>
+
+    <!-- Fireworks.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.min.js"></script>
+    <script>
+        const container = document.getElementById('fireworks');
+        const fireworks = new Fireworks(container, {
+            speed: 4,
+            acceleration: 1.1,
+            friction: 0.98,
+            gravity: 1.5,
+            particles: 50,
+            trace: 3,
+            explosion: 5
+        });
+
+        fireworks.start();
+    </script>
+</body>
+</html>
