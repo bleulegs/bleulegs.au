@@ -1,88 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Bleu Legs</title>
+    <title>Bleulegs</title>
     <style>
         body {
-            background-color: #001f3d;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            position: relative;
+        background-color: #0b0a0b;
+        color: white;
+        font-family: ui-monospace, Cascadia Code, Source Code Pro, monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
         }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            font-size: 2.5em;
-            background-color: #003366;
+
+        .logo {
+        font-size: 4em;
+        font-weight: bold;
+        color: white;
         }
-        .content-box {
-            background-color: #003366;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
+
+        .title {
+        font-size: 2em;
+        margin-top: 10px;
+        color: white;
         }
-        .content-box h2 {
-            font-size: 1.5em;
+
+        .text {
+        font-size: 1.2em;
+        margin: 20px 0;
+        color: #ccc;
         }
-        .content-box p {
-            font-size: 1em;
+
+        .buttons {
+        margin: 20px 0;
         }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
+
+        .buttons a {
+        display: inline-block;
+        background-color: #252325;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: background-color 0.3s, transform 0.15s;
         }
-        /* Make sure the fireworks don't block content */
-        #fireworks {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+
+        .buttons a:hover {
+        background-color: #353235;
+        }
+
+        footer {
+        margin-top: 40px;
+        font-size: 0.8em;
+        color: #ccc;
+        }
+
+        footer a {
+        color: #ccc;
         }
     </style>
 </head>
 <body>
-    <header>Bleu Legs</header>
-
-    <div class="content-box">
-        <h2>Box 1</h2>
-        <p>This is some text inside the first box.</p>
-    </div>
-
-    <div class="content-box">
-        <h2>Box 2</h2>
-        <p>This is some text inside the second box.</p>
-    </div>
-
-    <div class="content-box">
-        <h2>Box 3</h2>
-        <p>This is some text inside the third box.</p>
-    </div>
-
-    <footer style="text-align:center; padding: 20px; background-color: #003366;">
-        <a href="flappybird.html">Go to Flappy Bird Game</a>
-    </footer>
-
-    <!-- Fireworks.js Script -->
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.min.js"></script>
-    <script>
-        const container = document.getElementById('fireworks');
-        const fireworks = new Fireworks(container, {
-            speed: 4,
-            acceleration: 1.1,
-            friction: 0.98,
-            gravity: 1.5,
-            particles: 50,
-            trace: 3,
-            explosion: 5
-        });
-
-        fireworks.start();
-    </script>
+  <div class="logo">Team Bleu Legs</div>
+  <div class="text">FLL Internationals Team heading to Sydney in July to represent Australia!</div>
+  <div class="buttons">
+    <a href="https://github.com/bleulegs" target="_blank">GitHub</a>
+    <a href="https://github.com/linuskangau" target="_blank">@linuskangau</a>
+    <a href="https://www.instagram.com/rylan_gabriel" target="_blank">@rylangabriel</a>
+  </div>
+  <footer>
+    © 2025 Bleulegs. All rights reserved.<br>
+    <a href="https://github.com/bleulegs/bleulegs.au" target="_blank">View Source</a>
+  </footer>
 </body>
 </html>
