@@ -1,84 +1,290 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bleulegs</title>
-    <style>
-        body {
-        background-color: #0b0a0b;
-        color: white;
-        font-family: ui-monospace, Cascadia Code, Source Code Pro, monospace;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0; 
-        text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Bleu Legs | FIRST LEGO League</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #fff;
+    }
 
-        .logo {
-        font-size: 4em;
-        font-weight: bold;
-        color: white;
-        }
+    nav {
+      background-color: #111;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .title {
-        font-size: 2em;
-        margin-top: 10px;
-        color: white;
-        }
+    nav .site-title {
+      color: #fff;
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: 500px;
+    }
 
-        .text {
-        font-size: 1.2em;
-        margin: 20px 0;
-        color: #ccc;
-        }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-        .buttons {
-        margin: 20px 0;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
 
-        .buttons a {
-        display: inline-block;
-        background-color: #252325;
-        color: white;
-        padding: 10px 20px;
-        margin: 5px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 1em;
-        transition: background-color 0.3s, transform 0.15s;
-        }
+    nav ul li a:hover {
+      color: #cdcccc;
+    }
 
-        .buttons a:hover {
-        background-color: #353235;
-        }
+    header {
+      background: url('https://raw.githubusercontent.com/bleulegs/bleulegs.au/main/assets/regionals_trophy.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      text-align: center;
+    }
 
-        footer {
-        margin-top: 40px;
-        font-size: 0.8em;
-        color: #ccc;
-        }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
 
-        footer a {
-        color: #ccc;
-        }
-    </style>
+    header h1 {
+      font-size: 3.5rem;
+      z-index: 1;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      color: #ccc;
+      z-index: 1;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .scroll-indicator img {
+      width: 40px;
+      height: auto;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    main {
+      padding: 0;
+      background-color: #1a1a1a;
+    }
+
+    section {
+      margin-bottom: 0;
+      padding: 40px 20px;
+      color: #fff;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      background-color: #272727;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+      margin: 10px 0 5px 0;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    .team-member p {
+      color: #bbb;
+      margin: 0;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      font-weight: lighter;
+      text-align: center;
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+
+    #whoweare {
+      padding: 40px 20px;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    #whoweare h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .who-we-are-content p {
+      font-size: 1.1rem;
+      margin: 10px 10px;
+      align-items: center;
+      color: #bbb;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .who-we-are-content strong {
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <div class="logo">Team Bleu Legs</div>
-  <div class="text">FLL Internationals Team heading to Sydney in July to represent Australia!</div>
-  <div class="buttons">
-    <a href="https://github.com/bleulegs" target="_blank">GitHub</a>
-    <a href="https://github.com/linuskangau" target="_blank">@linuskangau</a>
-    <a href="https://www.instagram.com/rylan_gabriel" target="_blank">@rylangabriel</a>
+
+<nav>
+  <div class="site-title">Team Bleulegs</div>
+  <ul>
+    <li><a href="#team">Team Members</a></li>
+    <li><a href="#achievements">Awards</a></li>
+    <li><a href="#gallery">Photos</a></li>
+    <li><a href="#gallery">Press</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Team Bleulegs</h1>
+  <p>FIRST LEGO League National Award Winners</p>
+  <div class="scroll-indicator">
+    <img src="./assets/scroll.png" alt="Scroll Down Arrow">
   </div>
-  <footer>
-    © 2025 Bleulegs. All rights reserved.<br>
-    <a href="https://github.com/bleulegs/bleulegs.au" target="_blank">View Source</a>
-  </footer>
+</header>
+<main>
+  <section id="whoweare">
+    <h2>Who we are</h2>
+    <div class="who-we-are-content">
+      <p>We are <strong>Team Bleulegs</strong>, a team consisting of Year 9 & 10 national award-winning students from <strong>Calamvale Community College</strong> in Brisbane, Australia. Our team thrives on innovation, collaboration, and a shared passion for technology and engineering. We are committed to pushing the boundaries of robotics and STEM education, and through our dedication and teamwork, we have earned recognition at the <strong>FIRST LEGO League</strong> competition.</p>
+    </div>
+  </section>
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://raw.githubusercontent.com/bleulegs/bleulegs.au/main/assets/rylan.png" alt="Team Member 2">
+        <h3>Rylan</h3>
+        <p>Team Leader, Robot Game, & Design</p>
+      </div>
+      <div class="team-member">
+        <img src="https://blog.linuskang.au/src/profile_picture" alt="Linus">
+        <h3>Linus</h3>
+        <p>Innovation Software Dev & Robot Game</p>
+      </div>
+      <div class="team-member">
+        <img src="https://raw.githubusercontent.com/bleulegs/bleulegs.au/main/assets/charles.png" alt="Team Member 3">
+        <h3>Charles</h3>
+        <p>Robot Game</p>
+      </div>
+      <div class="team-member">
+        <img src="https://raw.githubusercontent.com/bleulegs/bleulegs.au/main/assets/user.png" alt="Team Member 4">
+        <h3>Aejab</h3>
+        <p>Innovation Design & Robot Game</p>
+      </div>
+      <div class="team-member">
+        <img src="https://raw.githubusercontent.com/bleulegs/bleulegs.au/main/assets/user.png" alt="Linus">
+        <h3>Aiden</h3>
+        <p>Innovation Project & Design Leader</p>
+      </div>
+      <div class="team-member">
+        <img src="https://raw.githubusercontent.com/bleulegs/bleulegs.au/main/assets/user.png" alt="Team Member 2">
+        <h3>Ethan</h3>
+        <p>Innovation Project</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2024-2025 Bleulegs. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
